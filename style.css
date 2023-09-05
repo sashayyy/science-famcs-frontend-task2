@@ -1,0 +1,287 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Wix Madefor Text', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(18, 16, 17);
+}
+
+/* а как сделать прозрачный scrollbar шоб не наезжал на header? */
+::-webkit-scrollbar {
+    width: 8px;
+    /* background-color: transparent; */
+    /* z-index: 5; */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(183, 96, 105);
+    height: 5px;
+}
+
+figure img {
+    border-radius: 8px;
+    transition: 1s;
+}
+
+/*не получилось сделать так, чтобы картинка увеличивалась в своей фиксированной области
+закругления углов коряво отображаются тогда*/
+.container-2 figure img:hover {
+    transform: scale(1.05);
+}
+
+.container-3 figure img:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    color: white;
+    font-size: 2.5rem;
+    display: inline-block;
+    position: relative;
+    margin-left: 2rem;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    background: white;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    color: rgb(227, 222, 215);
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: rgb(203, 195, 184);
+}
+
+p {
+    color: rgb(203, 195, 184);
+    padding-top: 1.5rem;
+}
+
+header {
+    background-color: rgb(183, 96, 105);
+    padding: 0.5rem 2rem;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 2rem;
+}
+
+nav {
+    position: relative;
+    width: 75%;
+    /* margin: auto; */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a:hover {
+    color: rgb(24, 22, 22);
+}
+
+a {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+#language {
+    margin-right: 4rem;
+}
+
+main {
+    padding-top: 2rem;
+    width: 90%;
+    margin: auto;
+}
+
+section {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    padding: 3rem;
+}
+
+.container-1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 600px;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.container-1 .intro-text {
+    height: 10%;
+    width: 600px;
+}
+
+.container-1 .intro-pic-1 {
+    height: 70%;
+}
+
+.container-1 .intro-pic-2 {
+    height: 100%;
+    margin-left: 2rem;
+}
+
+.container-2 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem;
+    width: 100%;
+}
+
+.container-2 .item {
+    width: 45%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.container-2 .item .item-text {
+    margin-left: 2rem;
+}
+
+.container-3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+}
+
+.container-3 .item-3 {
+    width: 90%;
+}
+
+.container-4 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -2.5rem;
+    padding: 2rem;
+}
+
+.container-4 .item {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 4.5rem;
+}
+
+.container-4 .item-text {
+    width: 25%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-4 .item-photo {
+    width: 70%;
+    height: 400px;
+}
+
+.container-4 .item-text span {
+    border: 2px solid rgba(207, 199, 188, 0.626);
+    border-radius: 4px;
+    color: rgb(207, 199, 188);
+    padding: 2px;
+    line-height: 2rem;
+}
+
+.more-info {
+    width: 90%;
+    height: 2rem;
+    border: 2px solid rgba(207, 199, 188, 0.626);
+    border-radius: 5px;
+    color: rgb(207, 199, 188);
+    background-color: rgb(18, 16, 17);
+    cursor: pointer;
+}
+
+#btn-1:hover {
+    border: 2px solid rgb(146, 116, 56);
+    color: rgb(146, 116, 56);
+}
+
+#btn-2:hover {
+    border: 2px solid rgb(16, 103, 161);
+    color: rgb(16, 103, 161);
+}
+
+#btn-3:hover {
+    border: 2px solid rgb(199, 119, 83);
+    color: rgb(199, 119, 83);
+}
+
+.container-5 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.container-5 .map {
+    margin-right: 2rem;
+}
+
+.container-5 .item-text {
+    width: 40%;
+}
+
+.container-5 a {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+footer {
+    background-color: rgb(18, 16, 17);
+    color: rgb(123, 122, 122);
+    padding: 0.4rem 0;
+    text-align: center;
+}
+
+footer a {
+    color: rgb(123, 122, 122);
+    font-size: 1rem;
+}
